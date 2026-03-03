@@ -1,0 +1,112 @@
+🚀 START NEXCOIN - COMPLETE GUIDE
+
+═══════════════════════════════════════════════════════════
+
+📋 WHAT YOU NEED TO DO:
+
+1. START MONGODB (Database)
+2. START BACKEND (Server)
+3. START FRONTEND (Already running)
+
+═══════════════════════════════════════════════════════════
+
+STEP 1: START MONGODB
+═══════════════════════════════════════════════════════════
+
+Open a NEW terminal and run:
+
+sudo systemctl start docker
+docker start mongodb-crypto
+
+If container doesn't exist, create it:
+
+docker run -d -p 27017:27017 --name mongodb-crypto mongo:latest
+
+Wait 5 seconds for MongoDB to start.
+
+═══════════════════════════════════════════════════════════
+
+STEP 2: START BACKEND
+═══════════════════════════════════════════════════════════
+
+The backend is trying to start but MongoDB isn't ready.
+
+Once MongoDB is running, the backend will connect automatically.
+
+You should see:
+✅ MongoDB connected
+🚀 Server running on port 5000
+
+═══════════════════════════════════════════════════════════
+
+STEP 3: TEST REGISTRATION
+═══════════════════════════════════════════════════════════
+
+1. Go to: http://localhost:5173/register
+
+2. Fill in the form:
+   Name: Test User
+   Email: test@example.com
+   Password: password123
+   Confirm: password123
+
+3. Click "Register"
+
+4. You should see:
+   ✅ "Account created successfully!"
+   → Redirected to dashboard
+
+═══════════════════════════════════════════════════════════
+
+🔍 VERIFY IT WORKED:
+═══════════════════════════════════════════════════════════
+
+Check if user was saved to database:
+
+docker exec -it mongodb-crypto mongosh
+use crypto-portfolio
+db.users.find()
+
+You should see your registered user!
+
+═══════════════════════════════════════════════════════════
+
+⚡ QUICK COMMANDS:
+═══════════════════════════════════════════════════════════
+
+# Start MongoDB
+docker start mongodb-crypto
+
+# Check MongoDB status
+docker ps | grep mongodb
+
+# View backend logs
+(Backend is already running in terminal 3)
+
+# Frontend is already running on:
+http://localhost:5173
+
+═══════════════════════════════════════════════════════════
+
+🎯 CURRENT STATUS:
+═══════════════════════════════════════════════════════════
+
+✅ Frontend: Running (http://localhost:5173)
+⏳ Backend: Waiting for MongoDB
+❌ MongoDB: Not running (need to start)
+
+═══════════════════════════════════════════════════════════
+
+💡 SIMPLE FIX:
+═══════════════════════════════════════════════════════════
+
+Just run these 2 commands in a new terminal:
+
+sudo systemctl start docker
+docker start mongodb-crypto
+
+Then wait 5 seconds and try registering again!
+
+═══════════════════════════════════════════════════════════
+
+Your registration data WILL be saved once MongoDB is running! 💾

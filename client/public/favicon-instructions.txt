@@ -1,0 +1,28 @@
+FAVICON CREATED!
+
+The NexCoin logo favicon has been added to your app.
+
+Files created:
+- favicon.svg (main favicon with gradient diamond + N)
+
+The favicon features:
+- Diamond shape with neon green to purple gradient
+- "N" letter in the center
+- Matches your NexCoin branding
+
+To see the favicon:
+1. Refresh your browser (Ctrl+Shift+R or Cmd+Shift+R)
+2. Look at the browser tab - you'll see the diamond logo
+3. If it doesn't appear immediately, clear browser cache
+
+The favicon will appear:
+- In browser tabs
+- In bookmarks
+- In browser history
+- On mobile home screens (when saved)
+
+Note: The favicon is an SVG with:
+- Gradient from #00FF9D (neon green) to #7F00FF (purple)
+- Diamond shape
+- Bold "N" letter
+- Transparent background

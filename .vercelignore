@@ -1,0 +1,14 @@
+node_modules
+.env
+.env.local
+*.log
+.DS_Store
+.vscode
+.idea
+*.md
+!README.md
+!VERCEL_DEPLOYMENT.md
+dist
+build
+coverage
+.git

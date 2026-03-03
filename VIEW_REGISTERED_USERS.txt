@@ -1,0 +1,154 @@
+═══════════════════════════════════════════════════════════
+          📊 HOW TO VIEW REGISTERED USERS 📊
+═══════════════════════════════════════════════════════════
+
+You have 3 EASY ways to view registered users:
+
+═══════════════════════════════════════════════════════════
+
+🥇 METHOD 1: Interactive Script (EASIEST)
+───────────────────────────────────────────────────────────
+
+Run this command:
+
+./VIEW_DATABASE.sh
+
+Then choose what you want to view:
+1. All registered users
+2. Count of registered users
+3. All wallets
+4. All price alerts
+5. Search user by email
+6. Open MongoDB shell
+
+═══════════════════════════════════════════════════════════
+
+🥈 METHOD 2: Node.js Script (PRETTY OUTPUT)
+───────────────────────────────────────────────────────────
+
+Run this command:
+
+cd server && node view-users.js
+
+This shows:
+✅ Total users, wallets, and alerts
+✅ Each user's details (name, email, registration date)
+✅ User preferences (theme, currency, notifications)
+✅ Connected wallets for each user
+✅ Price alerts for each user
+
+═══════════════════════════════════════════════════════════
+
+🥉 METHOD 3: Direct MongoDB Command (QUICK)
+───────────────────────────────────────────────────────────
+
+Run this command:
+
+sudo docker exec mongodb-crypto mongosh crypto-portfolio --eval "db.users.find({}, {password: 0}).pretty()"
+
+This shows all users WITHOUT passwords (secure).
+
+═══════════════════════════════════════════════════════════
+
+📊 QUICK COMMANDS:
+───────────────────────────────────────────────────────────
+
+View all users:
+sudo docker exec mongodb-crypto mongosh crypto-portfolio --eval "db.users.find({}, {password: 0}).pretty()"
+
+Count users:
+sudo docker exec mongodb-crypto mongosh crypto-portfolio --eval "db.users.countDocuments()"
+
+View only emails:
+sudo docker exec mongodb-crypto mongosh crypto-portfolio --eval "db.users.find({}, {email: 1, name: 1, _id: 0})"
+
+Search by email:
+sudo docker exec mongodb-crypto mongosh crypto-portfolio --eval "db.users.findOne({email: 'user@example.com'}, {password: 0})"
+
+═══════════════════════════════════════════════════════════
+
+🖥️ GUI TOOLS (Visual Interface):
+───────────────────────────────────────────────────────────
+
+Download MongoDB Compass (Official GUI):
+https://www.mongodb.com/try/download/compass
+
+1. Install MongoDB Compass
+2. Connect to: mongodb://localhost:27017
+3. Select database: crypto-portfolio
+4. Click on: users collection
+5. View all users in a nice table!
+
+═══════════════════════════════════════════════════════════
+
+📋 WHAT YOU'LL SEE:
+───────────────────────────────────────────────────────────
+
+Each registered user has:
+- Email address
+- Name (if provided)
+- Encrypted password (bcrypt)
+- Registration date
+- Preferences:
+  * Theme (light/dark)
+  * Currency (USD, EUR, etc.)
+  * Notification settings
+- Connected wallets (if any)
+- Price alerts (if any)
+
+═══════════════════════════════════════════════════════════
+
+🔍 EXAMPLE OUTPUT:
+───────────────────────────────────────────────────────────
+
+1. John Doe
+   📧 Email: john@example.com
+   🆔 ID: 69a70e67ec0d314b5843378a
+   📅 Registered: 3/3/2026, 4:37:59 PM
+   🎨 Theme: dark
+   💰 Currency: USD
+   🔔 Price Alerts: Enabled
+   📧 Email Notifications: Disabled
+   💼 Wallets: 1
+      - 0x1234567890...abcdef12 (ethereum)
+
+═══════════════════════════════════════════════════════════
+
+💡 TIPS:
+───────────────────────────────────────────────────────────
+
+✅ Passwords are NEVER shown (encrypted with bcrypt)
+✅ Use the Node.js script for the prettiest output
+✅ Use MongoDB Compass for visual browsing
+✅ Use direct commands for quick checks
+
+═══════════════════════════════════════════════════════════
+
+🚀 TRY IT NOW:
+───────────────────────────────────────────────────────────
+
+Easiest way:
+./VIEW_DATABASE.sh
+
+Or:
+cd server && node view-users.js
+
+═══════════════════════════════════════════════════════════
+
+📖 FULL DOCUMENTATION:
+───────────────────────────────────────────────────────────
+
+Read: HOW_TO_VIEW_DATABASE.md
+
+This file has:
+- All commands
+- GUI tool setup
+- Export/backup instructions
+- Troubleshooting
+- And more!
+
+═══════════════════════════════════════════════════════════
+
+That's it! Choose your preferred method and view your users! 💎
+
+═══════════════════════════════════════════════════════════

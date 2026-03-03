@@ -1,0 +1,91 @@
+🔧 TROUBLESHOOTING - Page Not Showing
+
+═══════════════════════════════════════════════════════════
+
+✅ SERVER STATUS:
+Frontend: Running on http://localhost:5173
+Backend: Running on http://localhost:5000
+
+═══════════════════════════════════════════════════════════
+
+🔄 TRY THESE STEPS:
+
+1. HARD REFRESH YOUR BROWSER
+   Windows/Linux: Ctrl + Shift + R
+   Mac: Cmd + Shift + R
+
+2. CLEAR BROWSER CACHE
+   - Open DevTools (F12)
+   - Right-click the refresh button
+   - Select "Empty Cache and Hard Reload"
+
+3. CLOSE AND REOPEN TAB
+   - Close the browser tab completely
+   - Open a new tab
+   - Go to: http://localhost:5173
+
+4. TRY INCOGNITO/PRIVATE MODE
+   - Open incognito window
+   - Visit: http://localhost:5173
+
+5. CHECK BROWSER CONSOLE
+   - Press F12 to open DevTools
+   - Click "Console" tab
+   - Look for any red errors
+   - Share the error message if you see any
+
+═══════════════════════════════════════════════════════════
+
+🌐 URLS TO TRY:
+
+Main Page:
+http://localhost:5173
+
+Login:
+http://localhost:5173/login
+
+Register:
+http://localhost:5173/register
+
+Dashboard:
+http://localhost:5173/dashboard
+
+═══════════════════════════════════════════════════════════
+
+📱 WHAT YOU SHOULD SEE:
+
+When you visit http://localhost:5173 you should see:
+
+1. Large diamond logo (💎)
+2. "CRYPTO PORTFOLIO TRACKER" headline
+3. Feature checkmarks
+4. "Get Started Free" button
+5. Statistics (20+ coins, 3 networks, etc.)
+6. Feature cards grid
+7. Live crypto prices table
+
+═══════════════════════════════════════════════════════════
+
+🐛 IF STILL NOT WORKING:
+
+1. Check if JavaScript is enabled in your browser
+2. Try a different browser (Chrome, Firefox, Edge)
+3. Make sure you're not blocking localhost
+4. Check if any browser extensions are blocking content
+
+═══════════════════════════════════════════════════════════
+
+💡 QUICK FIX:
+
+Close your browser completely, then:
+
+1. Open terminal
+2. Make sure you're in the project folder
+3. The frontend should already be running
+4. Open browser
+5. Go to: http://localhost:5173
+6. Press Ctrl+Shift+R to hard refresh
+
+═══════════════════════════════════════════════════════════
+
+The server is running! Just need to refresh your browser. 🚀
